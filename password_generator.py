@@ -12,9 +12,9 @@ def generate():
          digit_count = None
          while lenght is None and letter_count is None and spec_char_count is None and digit_count is None:
                   lenght_input = input("Enter lenght of your password: ")
-                  letter_count_input = input ("Enter letter count: ")
+                  letter_count_input = input ("Enter letters count: ")
                   spec_char_count_input = input("Enter special character count: ")
-                  digits_count_input = input("Enter digit count: ")
+                  digits_count_input = input("Enter digits count: ")
 
                   try:
                            lenght = int(lenght_input)
