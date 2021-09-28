@@ -27,8 +27,10 @@ def generate():
 
          random.shuffle(char)
          char_length = letter_count + spec_char_count + digit_count
+         if char_length > length:
+                  print("You have done it wrong, try again!")
+                  return generate()
          password = [] 
-         print(letter_count)
          for i in range (letter_count):
                   password.append(random.choice(letters))
          for i in range (spec_char_count):
