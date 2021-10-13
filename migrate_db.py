@@ -99,6 +99,19 @@ def mysql_create_migrations_table():
 		pass
 	return result
 
+def mysql_create_password_table():
+	cursor = get_cursor()
+	result = []
+	try:
+		cursor = connection.cursor()
+		result = cursor.execute("CREATE TABLE `used_passwords`(`password_id` INT NOT NULL AUTO_INCREMENT, `password` TEXT NOT NULL, `letters` INTEGER NOT NULL, `digits` INTEGER NOT NULL, `spec_char` INTEGER NOT NULL, `lenght` INTEGER NOT NULL, PRIMARY KEY (`password_id`));")
+		connection.commit()
+	except Error as e:
+		logger.error("CREATE TABLE `used_passwords`(`password_id` INT NOT NULL AUTO_INCREMENT, `password` TEXT NOT NULL, `letters` INTEGER NOT NULL, `digits` INTEGER NOT NULL, `spec_char` INTEGER NOT NULL, `lenght` INTEGER NOT NULL, PRIMARY KEY (`password_id`));")
+		logger.error("Problem creating password table in DB: " + str(e))
+		pass
+	return result
+
 # Check if table exists
 def mysql_check_if_migration_exists(migration_f_name):
 	records = []
@@ -113,6 +126,7 @@ def mysql_check_if_migration_exists(migration_f_name):
 		logger.error('Problem checking if migration exists: ' + str(e))
 		pass
 	return records[0][0]
+
 
 # Exec any sql on DB
 def mysql_exec_any_sql(sql_query):
@@ -144,6 +158,11 @@ if mysql_check_if_table_exists("migrations") == []:
 	mysql_create_migrations_table()
 else:
 	logger.info("Migrations table exists")
+
+if mysql_check_if_table_exists("used_passwords") == []:
+	mysql_create_password_table()
+else:
+	logger.info("Used_passwords table already exists")
 
 migrations_list = []
 # Reading all migration file names into an array
