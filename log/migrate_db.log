@@ -1,134 +1,39 @@
-2021-11-23 18:13:19,224 - INFO - migrate_db : Password DB
-2021-11-23 18:13:19,225 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:13:19,225 - INFO - migrate_db : DONE
-2021-11-23 18:13:19,229 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:13:19,230 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:13:19,231 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:13:19,232 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:13:19,232 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:13:19,445 - INFO - password_generator : Password generator
-2021-11-23 18:13:19,446 - INFO - password_generator : Loading configuration from file
-2021-11-23 18:13:19,446 - INFO - password_generator : DONE
-2021-11-23 18:13:19,449 - INFO - password_generator : Connecting to MySQL DB
-2021-11-23 18:13:19,450 - INFO - password_generator : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:14:36,329 - INFO - password_generator : Password generator
-2021-11-23 18:14:36,329 - INFO - password_generator : Loading configuration from file
-2021-11-23 18:14:36,330 - INFO - password_generator : DONE
-2021-11-23 18:14:36,333 - INFO - password_generator : Connecting to MySQL DB
-2021-11-23 18:14:36,334 - INFO - password_generator : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:30:09,647 - INFO - migrate_db : Password DB
-2021-11-23 18:30:09,648 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:30:09,648 - INFO - migrate_db : DONE
-2021-11-23 18:30:09,652 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:30:09,653 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:30:09,654 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:30:09,654 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:30:09,655 - ERROR - migrate_db : SELECT password FROM used_passwords COUNT(*) WHERE password = 'parolestets'
-2021-11-23 18:30:09,655 - ERROR - migrate_db : Problem executing sql query on DB: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(*) WHERE password = 'parolestets'' at line 1
-2021-11-23 18:30:09,655 - INFO - migrate_db : Password for testing is already in our database
-2021-11-23 18:30:09,655 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:30:56,451 - INFO - migrate_db : Password DB
-2021-11-23 18:30:56,451 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:30:56,451 - INFO - migrate_db : DONE
-2021-11-23 18:30:56,455 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:30:56,456 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:30:56,457 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:30:56,457 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:30:56,458 - ERROR - migrate_db : SELECT password COUNT(*) FROM used_passwords WHERE password = 'parolestets'
-2021-11-23 18:30:56,458 - ERROR - migrate_db : Problem executing sql query on DB: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(*) FROM used_passwords WHERE password = 'parolestets'' at line 1
-2021-11-23 18:30:56,458 - INFO - migrate_db : Password for testing is already in our database
-2021-11-23 18:30:56,458 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:37:57,808 - INFO - migrate_db : Password DB
-2021-11-23 18:37:57,809 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:37:57,809 - INFO - migrate_db : DONE
-2021-11-23 18:37:57,812 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:37:57,813 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:37:57,814 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:37:57,815 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:37:57,815 - INFO - migrate_db : None
-2021-11-23 18:38:47,443 - INFO - migrate_db : Password DB
-2021-11-23 18:38:47,443 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:38:47,443 - INFO - migrate_db : DONE
-2021-11-23 18:38:47,447 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:38:47,447 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:38:47,449 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:38:47,449 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:38:47,450 - INFO - migrate_db : None
-2021-11-23 18:42:34,282 - INFO - migrate_db : Password DB
-2021-11-23 18:42:34,283 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:42:34,283 - INFO - migrate_db : DONE
-2021-11-23 18:42:34,286 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:42:34,287 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:42:34,288 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:42:34,289 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:42:34,289 - INFO - migrate_db : None
-2021-11-23 18:47:40,165 - INFO - migrate_db : Password DB
-2021-11-23 18:47:40,165 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:47:40,166 - INFO - migrate_db : DONE
-2021-11-23 18:47:40,169 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:47:40,170 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:47:40,171 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:47:40,171 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:47:40,172 - INFO - migrate_db : None
-2021-11-23 18:48:19,388 - INFO - migrate_db : Password DB
-2021-11-23 18:48:19,388 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:48:19,388 - INFO - migrate_db : DONE
-2021-11-23 18:48:19,392 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:48:19,393 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:48:19,394 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:48:19,395 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:48:19,395 - ERROR - migrate_db : SELECT(*)FROM used_passwords
-2021-11-23 18:48:19,395 - ERROR - migrate_db : Problem executing sql query on DB: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*)FROM used_passwords' at line 1
-2021-11-23 18:48:19,395 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:48:44,623 - INFO - migrate_db : Password DB
-2021-11-23 18:48:44,624 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:48:44,624 - INFO - migrate_db : DONE
-2021-11-23 18:48:44,627 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:48:44,628 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:48:44,629 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:48:44,630 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:48:44,630 - ERROR - migrate_db : SELECT(*) FROM used_passwords
-2021-11-23 18:48:44,630 - ERROR - migrate_db : Problem executing sql query on DB: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) FROM used_passwords' at line 1
-2021-11-23 18:48:44,630 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:48:58,857 - INFO - migrate_db : Password DB
-2021-11-23 18:48:58,857 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:48:58,858 - INFO - migrate_db : DONE
-2021-11-23 18:48:58,861 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:48:58,862 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:48:58,863 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:48:58,864 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:48:58,864 - ERROR - migrate_db : SELECT (*) FROM used_passwords
-2021-11-23 18:48:58,864 - ERROR - migrate_db : Problem executing sql query on DB: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) FROM used_passwords' at line 1
-2021-11-23 18:48:58,864 - INFO - migrate_db : No migrations to execute
-2021-11-23 18:49:32,626 - INFO - migrate_db : Password DB
-2021-11-23 18:49:32,626 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:49:32,626 - INFO - migrate_db : DONE
-2021-11-23 18:49:32,630 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:49:32,630 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:49:32,632 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:49:32,632 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:49:32,633 - INFO - migrate_db : None
-2021-11-23 18:49:52,155 - INFO - migrate_db : Password DB
-2021-11-23 18:49:52,155 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:49:52,156 - INFO - migrate_db : DONE
-2021-11-23 18:49:52,159 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:49:52,160 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:49:52,161 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:49:52,162 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:49:52,162 - INFO - migrate_db : None
-2021-11-23 18:57:46,366 - INFO - migrate_db : Password DB
-2021-11-23 18:57:46,366 - INFO - migrate_db : Loading configuration from file
-2021-11-23 18:57:46,367 - INFO - migrate_db : DONE
-2021-11-23 18:57:46,370 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 18:57:46,370 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 18:57:46,372 - INFO - migrate_db : Migrations table exists
-2021-11-23 18:57:46,372 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 18:57:46,372 - INFO - migrate_db : No migrations to execute
-2021-11-23 19:03:41,792 - INFO - migrate_db : Password DB
-2021-11-23 19:03:41,793 - INFO - migrate_db : Loading configuration from file
-2021-11-23 19:03:41,793 - INFO - migrate_db : DONE
-2021-11-23 19:03:41,796 - INFO - migrate_db : Connecting to MySQL DB
-2021-11-23 19:03:41,797 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
-2021-11-23 19:03:41,798 - INFO - migrate_db : Migrations table exists
-2021-11-23 19:03:41,798 - INFO - migrate_db : Used_passwords table already exists
-2021-11-23 19:03:41,798 - INFO - migrate_db : No migrations to execute
+2021-11-23 19:56:26,506 - INFO - migrate_db : Password DB
+2021-11-23 19:56:26,506 - INFO - migrate_db : Loading configuration from file
+2021-11-23 19:56:26,506 - INFO - migrate_db : DONE
+2021-11-23 19:56:26,510 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 19:56:26,511 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
+2021-11-23 19:56:26,512 - INFO - migrate_db : Migrations table exists
+2021-11-23 19:56:26,512 - INFO - migrate_db : Used_passwords table already exists
+2021-11-23 19:56:26,513 - INFO - migrate_db : No migrations to execute
+2021-11-23 19:56:34,299 - INFO - migrate_db : Password DB
+2021-11-23 19:56:34,299 - INFO - migrate_db : Loading configuration from file
+2021-11-23 19:56:34,299 - INFO - migrate_db : DONE
+2021-11-23 19:56:34,302 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 19:56:34,303 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
+2021-11-23 19:56:34,304 - INFO - migrate_db : Migrations table exists
+2021-11-23 19:56:34,305 - INFO - migrate_db : Used_passwords table already exists
+2021-11-23 19:56:34,305 - INFO - migrate_db : No migrations to execute
+2021-11-23 19:56:34,520 - INFO - password_generator : Password generator
+2021-11-23 19:56:34,520 - INFO - password_generator : Loading configuration from file
+2021-11-23 19:56:34,521 - INFO - password_generator : DONE
+2021-11-23 19:56:34,524 - INFO - password_generator : Connecting to MySQL DB
+2021-11-23 19:56:34,524 - INFO - password_generator : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
+2021-11-23 20:00:25,849 - INFO - migrate_db : Password DB
+2021-11-23 20:00:25,849 - INFO - migrate_db : Loading configuration from file
+2021-11-23 20:00:25,850 - INFO - migrate_db : DONE
+2021-11-23 20:00:25,853 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 20:00:25,854 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
+2021-11-23 20:00:25,856 - INFO - migrate_db : Migrations table exists
+2021-11-23 20:00:25,857 - INFO - migrate_db : Used_passwords table already exists
+2021-11-23 20:00:25,857 - INFO - migrate_db : No migrations to execute
+2021-11-23 20:00:40,532 - INFO - password_generator : Password generator
+2021-11-23 20:00:40,532 - INFO - password_generator : Loading configuration from file
+2021-11-23 20:00:40,532 - INFO - password_generator : DONE
+2021-11-23 20:00:40,535 - INFO - password_generator : Connecting to MySQL DB
+2021-11-23 20:00:40,536 - INFO - password_generator : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
+2021-11-23 20:00:51,190 - INFO - password_generator : Password generator
+2021-11-23 20:00:51,190 - INFO - password_generator : Loading configuration from file
+2021-11-23 20:00:51,190 - INFO - password_generator : DONE
+2021-11-23 20:00:51,194 - INFO - password_generator : Connecting to MySQL DB
+2021-11-23 20:00:51,194 - INFO - password_generator : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
