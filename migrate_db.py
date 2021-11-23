@@ -163,7 +163,6 @@ if mysql_check_if_table_exists("used_passwords") == []:
 	mysql_create_password_table()
 else:
 	logger.info("Used_passwords table already exists")
-
 migrations_list = []
 # Reading all migration file names into an array
 cur_dir = os. getcwd()
@@ -192,6 +191,5 @@ for migration in migrations_list:
 			else:
 				logger.error("Problem applying migration. Aborting")
 				break
-
 if counter == 0:
 	logger.info("No migrations to execute")
