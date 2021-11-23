@@ -1,4 +1,5 @@
-password_gen/log_generator.yaml
-password_gen/config.ini
-password_gen/log_migrate_db.yaml
-password_gen/log/*.log
+log_generator.yaml
+config.ini
+log_migrate_db.yaml
+log/*.log
+log/*.log.*

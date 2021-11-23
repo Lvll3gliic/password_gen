@@ -33,7 +33,15 @@ else
 	if [ $? -eq 0 ]; then echo "OK"; else echo "Problem copying log_migrate_db.yaml file"; exit 1; fi
 fi
 echo "------------------------------------------------"
-
+echo "Chcecking if there is log directory -->"
+if test -d "./log"; then
+  echo "exists"
+else
+  echo "Creating new /log directory"
+  mkdir log
+  if [ $? -eq 0 ]; then echo "OK"; else echo "Problem making new log directory"; exit 1; fi
+fi
+echo "------------------------------------------------"
 echo "Getting python3 executable loc"
 python_exec_loc=$(which python3)
 if [ $? -eq 0 ]; then echo "OK"; else echo "Problem getting python3 exec location"; exit 1; fi
