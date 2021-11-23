@@ -19,7 +19,7 @@ if test -f "log_generator.yaml"; then
     echo "exists"
 else
 	echo "Copying log config file from local template log_generator.yaml"
-	cp log_generator.yaml log_generators.yaml
+	cp $HOME$sec_secret_storage_loc/log_generator.yaml .
 	if [ $? -eq 0 ]; then echo "OK"; else echo "Problem copying log_generator.yaml file"; exit 1; fi
 fi
 echo "------------------------------------------------"
@@ -29,7 +29,7 @@ if test -f "log_migrate_db.yaml"; then
     echo "exists"
 else
 	echo "Copying log config file from local template log_migrate_db.yaml"
-	cp log_migrate_db.yaml log_migrate_db.yaml
+	cp $HOME$sec_secret_storage_loc/log_migrate_db.yaml .
 	if [ $? -eq 0 ]; then echo "OK"; else echo "Problem copying log_migrate_db.yaml file"; exit 1; fi
 fi
 echo "------------------------------------------------"
