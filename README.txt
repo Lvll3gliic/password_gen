@@ -3,7 +3,7 @@ Mysql database and mariadb server
 - sudo apt install mariadb-server
 - sudi mysql_secure_installation
 
-root parole : 29468918
+root parole :
 
 lvll3gliic@Edgars:~/password_gen$ sudo mysql -u root -p 
 Enter password: 
@@ -18,7 +18,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> CREATE DATABASE passwords CHARACTER SET utf8;
 Query OK, 1 row affected (0.000 sec)
 
-MariaDB [(none)]> CREATE USER 'password_gen' IDENTIFIED BY 'parole';
+MariaDB [(none)]> CREATE USER 'password_gen' IDENTIFIED BY '';
 Query OK, 0 rows affected (0.001 sec)
 
 MariaDB [(none)]> flush privileges;
