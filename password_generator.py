@@ -173,4 +173,5 @@ def generate():
          #tiek konsole izprinteta parole
     print( 'Your unique password: ', "".join(password))
 
-generate()
+if __name__ == "__main__":
+    generate()
