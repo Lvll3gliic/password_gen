@@ -127,7 +127,44 @@ def mysql_check_if_migration_exists(migration_f_name):
 		pass
 	return records[0][0]
 
+def mysql_check_if_password_exists_in_db(password):
+    records = []
+    cursor = get_cursor()
+    try:
+        cursor = connection.cursor()
+        select = "SELECT password FROM used_passwords WHERE password = %s"
+        data = (password)
+        result = cursor.execute(select, (data,))
+        records = cursor.fetchall()
+        connection.commit()
+    except Error as e:
+        logger.error("SELECT password FROM used_passwords WHERE password = 'password'")
+        logger.error('Problem checking if that password exists: ' + str(e))
+        pass
+    return records
 
+def push_password_to_db(password, letters, digits, spec_char, length):
+    if mysql_check_if_password_exists_in_db(password) == []:
+        logger.info('Password is not in our database!')
+        logger.info('Pushing passwrod to db')
+        mysql_insert_password_into_db(password, letters, digits, spec_char, length)
+    else:
+        logger.info('Password is already in our database')
+def mysql_insert_password_into_db(password, letters, digits, spec_char, length):
+    cursor = get_cursor()
+    str(password)
+    try:
+        cursor = connection.cursor()
+        #result = cursor.execute("INSERT INTO used_passwords(password, letters, digits, spec_char, lenght) VALUES ('str(password)', int(letters), 'int(digits)', 'int(spec_char)', 'int(length)')")
+        #result = cursor.execute("INSERT INTO used_passwords(password, letters, digits, spec_char, lenght) VALUES (?,?,?,?,?)", (str(password), int(letters), int(digits), int(spec_char), int(length)))
+        add_password =("INSERT INTO used_passwords(password, letters, digits, spec_char, lenght) VALUES (%s, %s, %s, %s, %s)")
+        data = (str(password), int(letters), int(digits), int(spec_char), int(length))
+        cursor.execute(add_password, data)
+        connection.commit()
+    except Error as e:
+        logger.error("INSERT INTO used_passwords(password, letters, digits, spec_char, lenght) VALUES ('str(password)', 'int(letters)', 'int(digits)', 'int(spec_char)', 'int(length)')")
+        logger.error('Problem inserting password into db: ' + str(e))
+        pass
 # Exec any sql on DB
 def mysql_exec_any_sql(sql_query):
 	cursor = get_cursor()
@@ -193,3 +230,5 @@ for migration in migrations_list:
 				break
 if counter == 0:
 	logger.info("No migrations to execute")
+
+push_password_to_db("parolestests", 0, 0, 0, 0)

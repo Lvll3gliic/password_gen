@@ -78,14 +78,17 @@ def mysql_check_if_password_exists_in_db(password):
     cursor = get_cursor()
     try:
         cursor = connection.cursor()
-        result = cursor.execute("SELECT password FROM used_passwords WHERE password = 'str(password)'")
+        select = "SELECT password FROM used_passwords WHERE password = %s"
+        data = (password)
+        result = cursor.execute(select, (data,))
         records = cursor.fetchall()
         connection.commit()
+        print(records)
     except Error as e:
-        logger.error("SELECT password FROM used_passwords WHERE password = 'str(pass)'")
+        logger.error("SELECT password FROM used_passwords WHERE password = 'password'")
         logger.error('Problem checking if that password exists: ' + str(e))
         pass
-    return len(records)
+    return records
 
 def mysql_insert_password_into_db(password, letters, digits, spec_char, length):
     cursor = get_cursor()
@@ -103,11 +106,15 @@ def mysql_insert_password_into_db(password, letters, digits, spec_char, length):
         pass
 
 def push_password_to_db(password, letters, digits, spec_char, length):
-    if mysql_check_if_password_exists_in_db(password) == 0:
+    if mysql_check_if_password_exists_in_db(password) == []:
+        print(password)
         logger.debug('Password is not in our database!')
         mysql_insert_password_into_db(password, letters, digits, spec_char, length)
     else:
-        logger.debug('Password is already in our database, try again!')
+        logger.debug('Password is already in our database, to get new, unique passoword, try again!')
+def listToString(list):
+    password_string = str("".join(list))
+    return password_string
 
 # defineju funkciju, kas pieprasis lietotaja datu ievadi un pectam izveidos paroli
 def generate():
@@ -169,9 +176,10 @@ def generate():
         for i in range (length - char_length):
             password.append(random.choice(char))
     random.shuffle(password)
-    push_password_to_db(password, letter_count, digit_count, spec_char_count, length)
+    password_string = listToString(password)
+    print(password_string)
+    push_password_to_db(password_string, letter_count, digit_count, spec_char_count, length)
          #tiek konsole izprinteta parole
-    print( 'Your unique password: ', "".join(password))
-
+    print( 'Your password: ', "".join(password))
 if __name__ == "__main__":
     generate()
